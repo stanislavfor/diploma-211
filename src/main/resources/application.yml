@@ -1,0 +1,86 @@
+server:
+  port: 8081
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+spring:
+  datasource:
+
+  primary:
+    url: jdbc:postgresql://localhost:5432/images_db
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+    #    properties:
+    #      hibernate:
+    #        dialect: org.hibernate.dialect.PostgreSQLDialect
+    #        format_sql: true
+
+    secondary:
+      url: jdbc:h2:mem:test_db
+      driver-class-name: org.h2.Driver
+      username: sa
+      password:
+  #datasource:
+  #  images_db:
+  #    url: jdbc:postgresql://localhost:5432/images_db
+  #    username: postgres
+  #    password: password
+  #    driverClassName: org.postgresql.Driver
+  #  users_db:
+  #    url: jdbc:postgresql://localhost:5432/users_db
+  #    username: postgres
+  #    password: password
+  #    driverClassName: org.postgresql.Driver
+
+
+  thymeleaf:
+    cache: false
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+  web:
+    resources:
+      chain:
+        strategy:
+          content:
+            enabled: true
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+
+
+  devtools:
+    restart:
+      enabled: true   # Включает автоматическую перезагрузку при изменении файлов
+      additional-paths:
+        - src/main/resources/static/images
+        - src/main/resources/templates
+        - uploads
+      exclude:
+        - src/main/resources/static/images
+        - src/main/resources/templates
+        - uploads
+    livereload:
+      enabled: true   # Включает LiveReload для автоматической перезагрузки страницы в браузере
+
+  resources:
+    static-locations:
+      - classpath:/static/images/          # Директория для статических изображений
+      - file:uploads/                      # Внешняя директория для загружаемых файлов
+      - classpath:/templates/              # Директория для шаблонов
+    chain:
+      cache:
+        period: 0s                         # Отключает кэширование для немедленного обновления файлов
+      strategy:
+        content:
+          enabled: true                    # Включает стратегию для обновления ресурсов при изменении их содержимого
