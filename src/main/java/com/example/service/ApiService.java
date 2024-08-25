@@ -23,7 +23,6 @@ public class ApiService {
 
         HttpHeaders headers = new HttpHeaders();
         headers.set("Cookie", "JSESSIONID=" + jsessionid);
-
         HttpEntity<String> requestEntity = new HttpEntity<>(headers);
 
         ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, requestEntity, String.class);

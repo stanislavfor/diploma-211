@@ -1,7 +1,8 @@
-package com.example.service;
+package com.example.primary.service;
 
-import com.example.model.Item;
-import com.example.repository.ItemRepository;
+import com.example.primary.model.Item;
+import com.example.primary.repository.ItemRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
 public class ImageService {
 
     @Autowired

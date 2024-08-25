@@ -6,9 +6,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import com.example.model.User;
-import com.example.repository.UserRepository;
-import com.example.repository.UserRoleRepository;
+import com.example.secondary.model.User;
+import com.example.secondary.repository.UserRepository;
+import com.example.secondary.repository.UserRoleRepository;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 

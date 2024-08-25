@@ -1,6 +1,6 @@
 package com.example.config;
 
-import com.example.model.Role;
+import com.example.secondary.model.Role;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -22,7 +22,7 @@ public class SecurityConfiguration {
         http.authorizeHttpRequests(requests -> requests
                                 .requestMatchers("/images/my-app", "/images/email-page", "/images/sendEmail")
                                 .permitAll()
-                                .requestMatchers("/images/in")
+                                .requestMatchers("/images/in", "/images/in/add", "/images/in/edit/**", "/images/in/delete/**", "edit-item", "index")
                                 .hasAuthority(Role.ADMIN.getName())
                                 .anyRequest().authenticated()
                 )

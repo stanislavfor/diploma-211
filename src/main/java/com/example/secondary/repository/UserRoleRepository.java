@@ -1,6 +1,6 @@
-package com.example.repository;
+package com.example.secondary.repository;
 
-import com.example.model.UserRole;
+import com.example.secondary.model.UserRole;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

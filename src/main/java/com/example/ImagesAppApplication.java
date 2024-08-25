@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.service.UserService;
+import com.example.secondary.service.UserService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;

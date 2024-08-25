@@ -1,10 +1,10 @@
-package com.example.service;
+package com.example.secondary.service;
 
-import com.example.model.User;
-import com.example.model.Role;
-import com.example.model.UserRole;
-import com.example.repository.UserRepository;
-import com.example.repository.UserRoleRepository;
+import com.example.secondary.model.User;
+import com.example.secondary.model.Role;
+import com.example.secondary.model.UserRole;
+import com.example.secondary.repository.UserRepository;
+import com.example.secondary.repository.UserRoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Service;

@@ -82,13 +82,13 @@ CREATE TABLE users
 );
 
 -- Создать таблицу item
-CREATE TABLE item
+CREATE TABLE IF NOT EXISTS item
 (
-    id          SERIAL PRIMARY KEY,
-    name        VARCHAR(100) NOT NULL,
-    description TEXT,
-    link        VARCHAR(200)
-);
+  id          SERIAL PRIMARY KEY,
+  name        VARCHAR(100) NOT NULL,
+  description TEXT,
+  link        VARCHAR(200)
+  );
 
 ```
 
