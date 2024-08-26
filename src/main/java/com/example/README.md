@@ -6,26 +6,26 @@
 - ImageController для index.html
 - MyAppController для my-app.html
 - EmailController для email-page.html
--
+
 
 В директории model есть классы Item.java и User.java.<br>
 В директории service есть следующие сервисы:<br>
 
 - EmailService.java для email-page.html
--
 - FileService.java для index.html
 - ImageService.java для index.html
   В директории repository есть интерфейсы ItemRepository.java и UserRepository.java.<br>
--
+
 
 Авторизация и безопасность:<br>
+
 Приложение использует Spring Security для обеспечения безопасности.<br>
 В базе данных images_db есть следующие сущности:<br>
 
 - item (id, name, description, link).
 - users (id, login, password).
 - roles (id, name).
--
+
 
 Таблица user_roles связывает пользователей с ролями (many-to-many).
 В конкретном случае, user_roles(1,1) означает, что пользователь с id=1 имеет роль с id=1 (admin).<br>
@@ -36,7 +36,7 @@
 
 Исправление кода:
 Для того чтобы первичная страница проекта была http://localhost:8081/images/my-app, <br>
-а не http://localhost:8081/images, вам нужно настроить маршруты в Spring Boot.<br>
+а не http://localhost:8081/images, нам нужно настроить маршруты в Spring Boot.<br>
 Если переход на страницу происходит без авторизации, <br>
 то должна открываться страница oops.html с предупреждением о невозможности перехода.<br>
 Для проверки введенных данных в форму авторизации используйте классы <br>
