@@ -143,7 +143,7 @@ VALUES (1, 1), -- пользователь "admin" имеет роль "admin"
 
 ```
 
-## Thymeleaf шаблон страницы my-login.html
+## Thymeleaf шаблон страницы my-app.html
 
 ```html
 <!DOCTYPE html>
